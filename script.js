@@ -77,7 +77,7 @@ window.onload = function () {
 };
 
 function yesClick() {
-  alert("I know :))");
+  alert("I already know :))");
 }
 
 function noHover() {
