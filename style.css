@@ -1,58 +1,84 @@
-#btnNo {
-position: absolute;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
 * {
-    
-margin: 0;
-padding: 0;
-font-family: 'Raleway', sans-serif;
-}
-#loveQuestion {
-position: absolute;
-left: 220px;
-top: 230px;
-font-size: 80px;
-color: aliceblue;
-}
-input {
-width: 200px;
-font-size: 30px;
-border: none;
-color: white;
-padding: 16px 32px;
-text-align: center;
-}
-#btnYes {
-position: absolute;
-left: 480px;
-top: 450px;
-background-color: #7bd806;
-cursor: pointer;
-}
-#btnNo {
-position: absolute;
-left: 860px;
-top: 450px;
-background-color: #f4511e;
-transition: 0.3s;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
 }
 
 body {
-background-image:url(bg.jpg);
-height: 500px; 
-background-position: center; 
-background-repeat: no-repeat; 
-background-size: cover; 
-}
-canvas {
-display: block;
+    background-image: url(bg.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: scroll;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-body
-{
-    
-    overflow-y: scroll;
-    overflow:hidden;
+canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#loveQuestion {
+    font-size: 8vw; /* Scales based on viewport width */
+    color: aliceblue;
+    margin-bottom: 2rem;
+}
+
+input {
+    width: 50%; /* Adjust based on parent container */
+    max-width: 300px;
+    font-size: 1.5rem;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 1rem auto;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#btnYes {
+    background-color: #7bd806;
+}
+
+#btnNo {
+    background-color: #f4511e;
+    transition: transform 0.3s ease-in-out;
+}
+
+#btnNo:hover {
+    transform: translateX(10px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #loveQuestion {
+        font-size: 10vw;
+    }
+
+    input {
+        font-size: 1rem;
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    #loveQuestion {
+        font-size: 12vw;
+    }
+
+    input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
 }
