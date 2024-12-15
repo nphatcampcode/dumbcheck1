@@ -30,6 +30,7 @@ left: 480px;
 top: 450px;
 background-color: #7bd806;
 cursor: pointer;
+width: 300px; /* Increased width */
 }
 #btnNo {
 position: absolute;
